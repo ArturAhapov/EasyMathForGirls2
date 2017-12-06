@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/board"
+        tools:context="com.arturagapov.easymathforgirls.LevelActivity">
+    <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent" android:layout_height="wrap_content">
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/choice_button_height"
+                android:layout_marginTop="@dimen/margin_top_for_button"
+                android:layout_marginLeft="@dimen/margin_choice_button_horizontal"
+                android:layout_marginRight="@dimen/margin_choice_button_horizontal"
+                android:text="@string/learn"
+                android:textStyle="bold"
+                android:textSize="@dimen/titleText"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/buttonroundedblue"
+                android:id="@+id/learn"
+                android:onClick="onClickLearn"/>
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/choice_button_height"
+                android:layout_marginTop="@dimen/margin_between_buttons_vertical"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="@dimen/margin_choice_button_horizontal"
+                android:layout_marginRight="@dimen/margin_choice_button_horizontal"
+                android:text="@string/practice"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/buttonroundedgreen"
+                android:id="@+id/practice"
+                android:onClick="onClickPractice"/>
+    </LinearLayout>
+    <ImageView
+            android:src="@drawable/clouds"
+            android:layout_above="@+id/level_activity_bottom"
+            android:scaleType="fitEnd"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <LinearLayout
+            android:id="@+id/level_activity_bottom"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:background="@color/colorWhite"
+            android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView
+                android:id="@+id/more_apps"
+                android:textColor="@color/colorAzzure"
+                android:text="@string/more_apps"
+                android:layout_above="@+id/geo_quiz"
+                android:layout_marginTop="@dimen/margin_between_buttons_vertical"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        <ImageView
+                android:layout_width="@dimen/choice_button_height"
+                android:layout_height="@dimen/choice_button_height"
+                android:id="@+id/geo_quiz"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/geoquizicon"
+                android:layout_marginTop="@dimen/margin_between_buttons_vertical"
+                android:layout_marginBottom="@dimen/margin_between_buttons_vertical"
+                android:contentDescription="geo_quiz_promo"
+                android:onClick="onClickGeoQuiz"/>
+    </LinearLayout>
+</RelativeLayout>
